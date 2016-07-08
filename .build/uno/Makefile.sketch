@@ -1,0 +1,14 @@
+
+
+
+
+
+.build/uno/src/eyebrow_serial.cpp : src/eyebrow_serial.ino
+	@mkdir -p .build/uno/src
+	@echo src/eyebrow_serial.ino
+	@/usr/local/bin/ino preproc  -o $@ $^
+
+
+all : .build/uno/src/eyebrow_serial.cpp
+	@true
+
